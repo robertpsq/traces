@@ -1,0 +1,10 @@
+[package]
+name = "trace-system"
+version = "1.0.0"
+description = "Trace system"
+
+[[command]]
+name = "start"
+module = "node"
+runner = "node"
+args = ["server.js"]

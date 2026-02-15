@@ -1,0 +1,50 @@
+body {
+    font-family: Arial;
+    background: #eef7f0;
+    margin: 0;
+}
+
+.container, .table-container {
+    background: white;
+    padding: 30px;
+    margin: 60px auto;
+    width: 420px;
+    border-radius: 12px;
+}
+
+.table-container {
+    width: 80%;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #43a047;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #4caf50;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+}

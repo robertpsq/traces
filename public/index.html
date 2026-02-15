@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trace System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Submit Trace</h2>
+
+<form id="traceForm">
+
+<input type="text" id="badge_number" placeholder="Badge Number" required>
+
+<input type="text" id="suspect_name" placeholder="Suspect Name" required>
+
+<input type="text" id="phone_number" placeholder="Phone Number Traced" required>
+
+<button type="submit">Submit Trace</button>
+
+</form>
+
+<div class="bottom-buttons">
+<button onclick="window.location.href='records.html'">
+View Records
+</button>
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("traceForm").addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+
+    const data = {
+        badge_number: badge_number.value,
+        suspect_name: suspect_name.value,
+        phone_number: phone_number.value
+    };
+
+    await fetch("/submit-trace", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    });
+
+    alert("Trace submitted");
+
+    e.target.reset();
+});
+
+</script>
+
+</body>
+</html>
